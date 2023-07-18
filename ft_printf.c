@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mirnavar <mirnavar@student.42barcel>       +#+  +:+       +#+        */
+/*   By: mirnavar <mirnavar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/24 15:55:05 by mirnavar          #+#    #+#             */
-/*   Updated: 2022/12/14 10:41:29 by mirnavar         ###   ########.fr       */
+/*   Updated: 2023/07/18 14:40:59 by mirnavar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,7 +50,7 @@ static int	ft_conversion(va_list args, char conver)
 	else if (conver == 's')
 		rslt += ft_putstr(va_arg(args, char *));
 	else if (conver == 'd' || conver == 'i')
-		rslt += ft_itoa(va_arg(args, int));
+		rslt += ft_itoap(va_arg(args, int));
 	else if (conver == 'u')
 		rslt += ft_unsitoa(va_arg(args, unsigned int));
 	else if (conver == 'x')

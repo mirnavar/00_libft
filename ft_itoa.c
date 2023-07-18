@@ -3,65 +3,56 @@
 /*                                                        :::      ::::::::   */
 /*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mirnavar <mirnavar@student.42barcel>       +#+  +:+       +#+        */
+/*   By: mirnavar <mirnavar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/12/06 10:59:57 by mirnavar          #+#    #+#             */
-/*   Updated: 2022/12/14 10:04:51 by mirnavar         ###   ########.fr       */
+/*   Created: 2023/07/18 14:43:53 by mirnavar          #+#    #+#             */
+/*   Updated: 2023/07/18 14:49:18 by mirnavar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include "libft.h"
 
-static void	ft_len(int n, int *len);
-
-int	ft_itoa(int n)
+int	ft_ispn(int num)
 {
-	int		len;
-	char	*str;
+	if (num < 0)
+		return (-num);
+	return (num);
+}
 
-	if (n == -2147483648)
-		return (ft_putstr("-2147483648"));
-	ft_len(n, &len);
-	str = (char *)malloc(sizeof(char) * (len + 1));
-	if (!str)
-		return (-1);
-	str[len] = '\0';
-	if (n < 0)
+int	ft_len_int(int num)
+{
+	int	len;
+
+	len = 0;
+	if (num <= 0)
+		len++;
+	while (num)
 	{
-		str[0] = '-';
-		n = -n;
+		len++;
+		num = num / 10;
 	}
-	while (n > 9)
-	{
-		str[len - 1] = (n % 10) + 48;
-		n = n / 10;
-		len--;
-	}
-	str[len - 1] = (n % 10) + 48;
-	len = ft_putstr(str);
-	free(str);
 	return (len);
 }
-//len = ft_putstr(str) : porque si solo hago ft_putstr y el return es len, 
-//len = 1 (ver len--) y tengo que devolver el número de carácteres printeados
 
-static void	ft_len(int n, int *len)
+char	*ft_itoa(int n)
 {
-	int	i;
+	char	*res;
+	int		len;
 
-	*len = 0;
-	i = 0;
+	len = ft_len_int(n);
+	res = malloc(sizeof(char) * (len + 1));
+	if (!res)
+		return (0);
+	res[len] = '\0';
 	if (n < 0)
+		res[0] = '-';
+	else if (n == 0)
+		res[0] = '0';
+	while (n != 0)
 	{
-		i++;
-		*len += 1;
-		n = -n;
-	}
-	while (n > 9)
-	{
+		len--;
+		res[len] = ft_ispn(n % 10) + '0';
 		n = n / 10;
-		*len += 1;
 	}
-	if (n >= 0)
-		*len += 1;
+	return (res);
 }

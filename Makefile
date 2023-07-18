@@ -6,7 +6,7 @@
 #    By: mirnavar <mirnavar@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/09/20 10:37:29 by mirnavar          #+#    #+#              #
-#    Updated: 2023/06/09 14:51:47 by mirnavar         ###   ########.fr        #
+#    Updated: 2023/07/18 14:48:25 by mirnavar         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -32,6 +32,8 @@ SRC = 		ft_bzero.c ft_isalnum.c \
 			ft_strjoin.c ft_strtrim.c \
 			ft_split.c ft_itoa.c \
 			ft_strmapi.c ft_striteri.c \
+			ft_itoap.c ft_putchar.c ft_printf.c \
+			ft_putstr.c ft_unsitoa.c ft_hexa.c ft_void.c\
 			get_next_line.c get_next_line_utils.c \
 			get_next_line_bonus.c get_next_line_utils_bonus.c
 
@@ -49,7 +51,9 @@ CFLAGS =	-Wall -Wextra -Werror
 CC =		gcc
 
 #cabecera/headers (para incluir a todas las funciones de .c)
-HDR = libft.h
+HDR = libft.h\
+	ft_printf.h\
+	get_next_line.h
 
 all:
 			$(MAKE) $(NAME)
