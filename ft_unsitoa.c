@@ -1,36 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_itoa.c                                          :+:      :+:    :+:   */
+/*   ft_uitoa.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mirnavar <mirnavar@student.42barcel>       +#+  +:+       +#+        */
+/*   By: mirnavar <mirnavar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/12/06 10:59:57 by mirnavar          #+#    #+#             */
-/*   Updated: 2022/12/14 10:04:51 by mirnavar         ###   ########.fr       */
+/*   Created: 2022/12/05 14:53:04 by mirnavar          #+#    #+#             */
+/*   Updated: 2022/12/06 12:02:56 by mirnavar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-static void	ft_len(int n, int *len);
+static void	ft_len(unsigned int n, int *len);
 
-int	ft_itoa(int n)
+int	ft_unsitoa(unsigned int n)
 {
 	int		len;
 	char	*str;
 
-	if (n == -2147483648)
-		return (ft_putstr("-2147483648"));
 	ft_len(n, &len);
 	str = (char *)malloc(sizeof(char) * (len + 1));
 	if (!str)
 		return (-1);
 	str[len] = '\0';
-	if (n < 0)
-	{
-		str[0] = '-';
-		n = -n;
-	}
 	while (n > 9)
 	{
 		str[len - 1] = (n % 10) + 48;
@@ -45,18 +38,12 @@ int	ft_itoa(int n)
 //len = ft_putstr(str) : porque si solo hago ft_putstr y el return es len, 
 //len = 1 (ver len--) y tengo que devolver el número de carácteres printeados
 
-static void	ft_len(int n, int *len)
+static void	ft_len(unsigned int n, int *len)
 {
 	int	i;
 
 	*len = 0;
 	i = 0;
-	if (n < 0)
-	{
-		i++;
-		*len += 1;
-		n = -n;
-	}
 	while (n > 9)
 	{
 		n = n / 10;

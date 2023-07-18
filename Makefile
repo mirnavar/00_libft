@@ -6,7 +6,7 @@
 #    By: mirnavar <mirnavar@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/09/20 10:37:29 by mirnavar          #+#    #+#              #
-#    Updated: 2022/10/13 09:58:10 by mirnavar         ###   ########.fr        #
+#    Updated: 2023/06/09 14:51:47 by mirnavar         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -31,7 +31,9 @@ SRC = 		ft_bzero.c ft_isalnum.c \
 			ft_putnbr_fd.c ft_substr.c \
 			ft_strjoin.c ft_strtrim.c \
 			ft_split.c ft_itoa.c \
-			ft_strmapi.c ft_striteri.c
+			ft_strmapi.c ft_striteri.c \
+			get_next_line.c get_next_line_utils.c \
+			get_next_line_bonus.c get_next_line_utils_bonus.c
 
 SRC_BONUS =	ft_lstnew_bonus.c ft_lstadd_front_bonus.c \
 			ft_lstsize_bonus.c ft_lstlast_bonus.c \
@@ -61,7 +63,7 @@ bonus:
 $(BONUS):	$(OBJ) $(OBJ_BONUS) $(HDR)
 			ar -rcs  $(NAME) $(OBJ) $(OBJ_BONUS)
 
-%.o:		%.c $(HDHR)
+%.o:		%.c $(HDR)
 	$(CC) $(CFLAGS) -c $< -o ${<:.c=.o}
 
 clean:
