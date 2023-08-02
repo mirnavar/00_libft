@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlcpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mirnavar <mirnavar@student.42barcel>       +#+  +:+       +#+        */
+/*   By: mirnavar <mirnavar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/20 15:09:18 by mirnavar          #+#    #+#             */
-/*   Updated: 2022/10/11 17:14:06 by mirnavar         ###   ########.fr       */
+/*   Updated: 2023/08/02 10:28:03 by mirnavar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,9 +20,9 @@ size_t	ft_strlcpy(char *dest, const char *src, size_t n)
 	if (n != 0)
 	{
 		while (i < n - 1 && src[i] != '\0')
-		{	
-		dest[i] = src[i];
-		i++;
+		{
+			dest[i] = src[i];
+			i++;
 		}
 		dest[i] = '\0';
 	}

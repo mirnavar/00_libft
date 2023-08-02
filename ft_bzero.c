@@ -3,15 +3,15 @@
 /*                                                        :::      ::::::::   */
 /*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mirnavar <mirnavar@student.42barcel>       +#+  +:+       +#+        */
+/*   By: mirnavar <mirnavar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/16 15:13:20 by mirnavar          #+#    #+#             */
-/*   Updated: 2022/09/20 17:14:57 by mirnavar         ###   ########.fr       */
+/*   Updated: 2023/08/02 10:24:43 by mirnavar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include<stdio.h>
-#include<string.h>
+#include <stdio.h>
+#include <string.h>
 
 void	ft_bzero(void *s, size_t n)
 {

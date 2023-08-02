@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   get_next_line.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mirnavar <mirnavar@student.42barcel>       +#+  +:+       +#+        */
+/*   By: mirnavar <mirnavar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/10 11:50:48 by mirnavar          #+#    #+#             */
-/*   Updated: 2023/05/25 15:57:35 by mirnavar         ###   ########.fr       */
+/*   Updated: 2023/08/02 10:32:47 by mirnavar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -126,24 +126,24 @@ char	*ft_new_str(char *buff)
 	return (new);
 }
 
-int	main(int argc, char **argv)
-{
-	int	fd;
-	fd = 0;
-	if (argc > 1)
-	{
-		fd = open(argv[1], O_RDONLY);
-		if (fd < 0)
-		{	printf("Error fd: %s", argv[1]);
-			exit(1);
-		}
-	//	get_next_line(fd);
-	//	get_next_line(fd);
-		printf("%s", get_next_line(fd));
+//int	main(int argc, char **argv)
+//{
+//	int	fd;
+//	fd = 0;
+//	if (argc > 1)
+//	{
+//		fd = open(argv[1], O_RDONLY);
+//		if (fd < 0)
+//		{	printf("Error fd: %s", argv[1]);
+//			exit(1);
+//		}
+//	//	get_next_line(fd);
+//	//	get_next_line(fd);
 //		printf("%s", get_next_line(fd));
-//		char *buff = ft_read_str(fd, buff);
-//		printf("%s\n", buff);
-	}
-	close(fd);
-	return (0);
-}
+////		printf("%s", get_next_line(fd));
+////		char *buff = ft_read_str(fd, buff);
+////		printf("%s\n", buff);
+//	}
+//	close(fd);
+//	return (0);
+//}

@@ -3,13 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_toupper.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mirnavar <mirnavar@student.42barcel>       +#+  +:+       +#+        */
+/*   By: mirnavar <mirnavar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/16 15:48:42 by mirnavar          #+#    #+#             */
-/*   Updated: 2022/09/16 17:57:41 by mirnavar         ###   ########.fr       */
+/*   Updated: 2023/08/02 10:28:46 by mirnavar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include<stdio.h>
+
+#include <stdio.h>
 
 int	ft_toupper(int c)
 {

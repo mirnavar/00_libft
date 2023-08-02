@@ -3,15 +3,15 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mirnavar <mirnavar@student.42barcel>       +#+  +:+       +#+        */
+/*   By: mirnavar <mirnavar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/21 16:17:13 by mirnavar          #+#    #+#             */
-/*   Updated: 2022/09/21 19:08:47 by mirnavar         ###   ########.fr       */
+/*   Updated: 2023/08/02 10:26:49 by mirnavar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include<stdio.h>
+#include <stdio.h>
 
 size_t	ft_strlcat(char *dest, const char *src, size_t n)
 {

@@ -3,14 +3,15 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memset.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mirnavar <mirnavar@student.42barcel>       +#+  +:+       +#+        */
+/*   By: mirnavar <mirnavar@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/15 18:49:09 by mirnavar          #+#    #+#             */
-/*   Updated: 2022/09/16 17:34:40 by mirnavar         ###   ########.fr       */
+/*   Updated: 2023/08/02 10:29:35 by mirnavar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include<stdio.h>
-#include<string.h>
+
+#include <stdio.h>
+#include <string.h>
 
 void	*ft_memset(void *b, int c, size_t len)
 {
